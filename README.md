@@ -15,11 +15,11 @@ This project helped me to understand the MERN stack and the inner workings of Ap
 - [Credits](#credits)
 - [License](#license)
 
-## Installation
+## Application Link
 
-Simply visit [link](https://mernbookmobile-5ced8148634d.herokuapp.com/)
+Simply visit this [link](https://mernbookmobile-5ced8148634d.herokuapp.com/)
 
-## Usage
+## Application Usage
 
 Search for books using the search bar, which will render results that include the title, description, author(s), and an image if available
 
