@@ -30,7 +30,7 @@ const SavedBooks = () => {
         throw new Error("something went wrong!");
       }
 
-      const updatedUser = data.removeBook;
+      const updatedUser = data;
       setUserData(updatedUser);
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
@@ -40,7 +40,7 @@ const SavedBooks = () => {
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 
