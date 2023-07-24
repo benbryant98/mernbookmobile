@@ -23,7 +23,7 @@ const SearchBooks = () => {
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
   const [saveBookMutation, { error }] = useMutation(SAVE_BOOK, {
-    update(cache, { data: { saveBook } }) {
+    update(cache, { data: { saveBookMutation } }) {
       try {
         const { me } = cache.readQuery({
           query: GET_ME,
@@ -32,7 +32,9 @@ const SearchBooks = () => {
               ...me,
               savedBooks: [
                 ...me.savedBooks,
-                savedBook.savedBooks[saveBook.savedBooks.length - 1],
+                saveBookMutation.savedBooks[
+                  saveBookMutation.savedBooks.length - 1
+                ],
               ],
             },
           },
