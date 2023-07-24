@@ -14,7 +14,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Navbar />
           <Routes>
             <Route path="/" element={<SearchBooks />} />
