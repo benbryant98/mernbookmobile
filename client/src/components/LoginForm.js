@@ -7,15 +7,10 @@ import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const LoginForm = () => {
-  const [userFormData, setUserFormData] = useState({ email: "", password: "" });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [login, { error }] = useMutation(LOGIN_USER);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setUserFormData({ ...userFormData, [name]: value });
-  };
+  const [login, { error }] = useMutation(LOGIN_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -41,11 +36,16 @@ const LoginForm = () => {
       console.error(err);
       setShowAlert(true);
     }
+  };
+
+  const [userFormData, setUserFormData] = useState({ email: "", password: "" });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
 
     setUserFormData({
-      username: "",
-      email: "",
-      password: "",
+      ...userFormData,
+      [name]: value,
     });
   };
 
