@@ -16,9 +16,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "babel": "^6.23.0",
     "jsonwebtoken": "^9.0.1",
-    "react-scripts": "5.0.0",
     "serve": "^14.2.0"
   }
 }
